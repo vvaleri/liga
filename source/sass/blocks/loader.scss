@@ -1,0 +1,79 @@
+.loader {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // display: none;
+    
+    &__logo {
+      display: flex;
+      align-items: center;
+      flex: 1 0 auto;
+      animation: fade 3s;
+    }
+    
+    &__text {
+      display: flex;
+      flex: 0 0 130px;
+      font-size: 24px;
+
+      @include viewport--md {
+        display: none;
+    }
+    }
+}
+
+._mobile {
+    display: none;
+
+    @include viewport--md {
+        display: block;
+    }
+}
+  
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+    
+#symbol1, #symbol2, #symbol3,
+#symbol4, #symbol5, #symbol6, .symbol-logo {
+    animation: fade 5s;
+    animation-fill-mode: forwards;
+}
+    
+#symbol2 {
+    animation-delay: 0.2s;
+}
+    
+#symbol3 {
+    animation-delay: 0.4s;
+}
+  
+#symbol4 {
+    animation-delay: 0.6s;
+}
+  
+#symbol5 {
+    animation-delay: 0.8s;
+}
+  
+#symbol6 {
+    animation-delay: 1s;
+}
+  
+svg {
+    @include viewport--md {
+        width: 551px;
+        height: 70px;
+    }
+}
+
+.hide {
+    display: none;
+}
