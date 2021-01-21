@@ -541,6 +541,9 @@ button,
       margin: 0; }
     .header__link svg {
       margin: 0 0 5px 0; }
+    .header__link a:focus {
+      outline-style: dashed;
+      outline-color: #2c39f2; }
     @media (max-width: 1023px) {
       .header__link {
         margin: 0 0 30px 0;
@@ -710,9 +713,13 @@ button,
       .main__bg {
         display: none; } }
   .main__inner {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .main__title {
     display: -webkit-box;
     display: -ms-flexbox;
