@@ -1,9 +1,14 @@
 .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // display: none;
+    background-color: $color-default-white;
+    z-index: 10;
     
     &__logo {
       display: flex;
@@ -44,7 +49,6 @@
 #symbol1, #symbol2, #symbol3,
 #symbol4, #symbol5, #symbol6, .symbol-logo {
     animation: fade 5s;
-    animation-fill-mode: forwards;
 }
     
 #symbol2 {
