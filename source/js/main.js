@@ -3,6 +3,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
 import {clickLoader} from './modules/preloader';
+import {openMenu} from './modules/burger';
 
 // Utils
 // ---------------------------------
@@ -15,4 +16,5 @@ iosVhFix();
 
 initModals();
 clickLoader();
+openMenu();
 

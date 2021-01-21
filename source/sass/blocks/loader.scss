@@ -15,6 +15,13 @@
       align-items: center;
       flex: 1 0 auto;
       animation: fade 3s;
+
+      svg {
+        @include viewport--md {
+            width: 551px;
+            height: 70px;
+        }
+    }
     }
     
     &__text {
@@ -71,12 +78,6 @@
     animation-delay: 1s;
 }
   
-svg {
-    @include viewport--md {
-        width: 551px;
-        height: 70px;
-    }
-}
 
 .hide {
     display: none;
