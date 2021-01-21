@@ -49,19 +49,19 @@ const js = () => {
       .pipe(gulp.dest('build/js'))
 };
 
-const svgo = () => {
-  return gulp.src('source/img/**/*.{svg}')
-      .pipe(imagemin([
-        imagemin.svgo({
-            plugins: [
-              {removeViewBox: false},
-              {removeRasterImages: true},
-              {removeUselessStrokeAndFill: false},
-            ]
-          }),
-      ]))
-      .pipe(gulp.dest('source/img'));
-};
+// const svgo = () => {
+//   return gulp.src('source/img/**/*.{svg}')
+//       .pipe(imagemin([
+//         imagemin.svgo({
+//             plugins: [
+//               {removeViewBox: false},
+//               {removeRasterImages: true},
+//               {removeUselessStrokeAndFill: false},
+//             ]
+//           }),
+//       ]))
+//       .pipe(gulp.dest('source/img'));
+// };
 
 // const sprite = () => {
 //   return gulp.src('source/img/sprite/*.svg')
@@ -122,7 +122,7 @@ const clean = () => {
   return del('build');
 };
 
-const build = gulp.series(clean, svgo, copy, css, js, html);
+const build = gulp.series(clean, copy, css, js, html);
 
 const start = gulp.series(build, syncserver);
 

@@ -1,7 +1,4 @@
 .main {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -16,7 +13,11 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        z-index: 1;
+        z-index: 2;
+
+        @include viewport--md {
+           display: none;
+        }
     }
 
     &__inner {
@@ -42,12 +43,33 @@
     &__content {
 
         p {
+            max-width: 352px;
             font-size: 30px;
             line-height: 40px;
+
+            @include viewport--md {
+                color: $color-default-white;
+            }
         }
 
         @include viewport--md {
-            display: none;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-neon-blue;
+            z-index: 4;
+            transition: 1s;
+
+            &.active {
+                left: 0;
+                transition: 1s;
+            }
         }
     }
 
