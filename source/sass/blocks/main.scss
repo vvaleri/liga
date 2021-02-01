@@ -23,6 +23,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include viewport--md {
+      justify-content: flex-start;
+    }
   }
 
   &__title {
@@ -37,6 +41,10 @@
     line-height: 96px;
     color: $color-neon-blue;
     font-weight: 400;
+
+    @include viewport--md {
+      margin: 0;
+    }
   }
 
   &__content {
@@ -62,11 +70,11 @@
       align-items: center;
       background-color: $color-neon-blue;
       z-index: 4;
-      transition: 1s;
+      transition: left 0.7s;
 
       &.active {
         left: 0;
-        transition: 1s;
+        transition: left 0.7s;
       }
     }
   }

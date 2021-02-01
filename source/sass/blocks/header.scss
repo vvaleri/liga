@@ -52,13 +52,13 @@
       background-color: $color-default-white;
       opacity: 0;
       visibility: hidden;
-      transition: 1s;
+      transition: all 0.5s;
       z-index: 5;
 
       &.active {
         opacity: 1;
         visibility: visible;
-        transition: 1s;
+        transition: opacity 0.5s;
       }
     }
   }
@@ -105,11 +105,15 @@
         width: 30px;
         height: 2px;
         background-color: $color-neon-blue;
-        transition: 0.7s;
+        transition: all 0.3s;
       }
 
       &::after {
         bottom: 0;
+      }
+
+      &::before {
+        top: 6px;
       }
 
       span {
@@ -117,19 +121,20 @@
         height: 2px;
         position: absolute;
         background-color: $color-neon-blue;
-        top: 6px;
+        top: 0;
+        font-size: 0;
       }
 
       &.active::before {
         transform: rotate(45deg);
         top: 6px;
-        transition: 0.7s;
+        transition: transform 0.3s;
       }
 
       &.active::after {
         transform: rotate(-45deg);
         bottom: 6px;
-        transition: 0.7s;
+        transition: transform 0.3s;
       }
 
       &.active span {
@@ -139,8 +144,3 @@
   }
 }
 
-.link-blog {
-  @include viewport--md {
-    display: none;
-  }
-}
