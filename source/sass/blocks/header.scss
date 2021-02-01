@@ -3,15 +3,12 @@
   display: flex;
   justify-content: space-between;
   padding: 25px 40px;
-  
 
-  @include viewport--md  {
+  @include viewport--md {
     padding: 0;
   }
 
-  
   &__wrapper {
-
     @include viewport--md {
       position: absolute;
       width: 100%;
@@ -22,7 +19,6 @@
       background-color: $color-default-white;
       z-index: 7;
     }
-
   }
 
   &__logo svg {
@@ -44,8 +40,7 @@
   }
 
   &__menu {
-
-     @include viewport--md {
+    @include viewport--md {
       position: absolute;
       top: 0;
       left: 0;
@@ -65,7 +60,6 @@
         visibility: visible;
         transition: 1s;
       }
-    
     }
   }
 
@@ -91,7 +85,6 @@
       margin: 0 0 30px 0;
       text-align: center;
     }
-    
   }
 
   &__burger {
@@ -105,9 +98,9 @@
       right: 35px;
       z-index: 6;
 
-      &:before,
-      &:after {
-        content: '';
+      &::before,
+      &::after {
+        content: "";
         position: absolute;
         width: 30px;
         height: 2px;
@@ -115,10 +108,10 @@
         transition: 0.7s;
       }
 
-      &:after {
+      &::after {
         bottom: 0;
       }
-        
+
       span {
         width: 30px;
         height: 2px;
@@ -127,13 +120,13 @@
         top: 6px;
       }
 
-      &.active:before {
+      &.active::before {
         transform: rotate(45deg);
         top: 6px;
         transition: 0.7s;
       }
 
-      &.active:after {
+      &.active::after {
         transform: rotate(-45deg);
         bottom: 6px;
         transition: 0.7s;
@@ -142,14 +135,11 @@
       &.active span {
         display: none;
       }
-
     }
-
   }
-
 }
 
-#link-blog {
+.link-blog {
   @include viewport--md {
     display: none;
   }
