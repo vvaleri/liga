@@ -657,28 +657,33 @@ button,
   to {
     opacity: 1; } }
 
-#symbol1, #symbol2, #symbol3,
-#symbol4, #symbol5, #symbol6, .symbol-logo {
+.symbol1,
+.symbol2,
+.symbol3,
+.symbol4,
+.symbol5,
+.symbol6,
+.symbol-logo {
   -webkit-animation: fade 5s;
           animation: fade 5s; }
 
-#symbol2 {
+.symbol2 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s; }
 
-#symbol3 {
+.symbol3 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s; }
 
-#symbol4 {
+.symbol4 {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s; }
 
-#symbol5 {
+.symbol5 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s; }
 
-#symbol6 {
+.symbol6 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s; }
 
