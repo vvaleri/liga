@@ -13,6 +13,7 @@
     align-items: flex-end;
     justify-content: center;
     z-index: 2;
+    pointer-events: none;
 
     @include viewport--md {
       display: none;
