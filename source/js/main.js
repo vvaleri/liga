@@ -3,7 +3,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
 import {clickLoader} from './modules/preloader';
-import {openContent} from './modules/toggle';
+import {openMenu} from './modules/toggleMobile';
+import {openContent} from './modules/toggleDesktop';
 
 // Utils
 // ---------------------------------
@@ -16,5 +17,6 @@ iosVhFix();
 
 initModals();
 clickLoader();
+openMenu();
 openContent();
 
